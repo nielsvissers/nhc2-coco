@@ -1,8 +1,8 @@
 import asyncio
 import socket
-
-from nhc2_coco.coco_discover import CoCoDiscover
-from nhc2_coco.coco_profiles import CoCoProfiles
+import time
+from .coco_discover import CoCoDiscover
+from .coco_profiles import CoCoProfiles
 
 loop = asyncio.get_event_loop()
 
@@ -54,8 +54,10 @@ class CoCoDiscoverProfiles:
                          self._done_discovering_profiles_callback)
 
     def _done_discovering_profiles_callback(self):
-        if len(self._controllers_found) == len(self._profiles_found):
-            loop.call_soon_threadsafe(callback=self._done)
+        while len(self._controllers_found) != len(self._profiles_found):
+            time.sleep(1)
+            
+        loop.call_soon_threadsafe(callback=self._done)
 
     def _discover_controllers_callback(self, address, mac, is_nhc2):
         if (is_nhc2):

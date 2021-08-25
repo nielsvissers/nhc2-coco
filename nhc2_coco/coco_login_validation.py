@@ -3,7 +3,7 @@ import os
 
 import paho.mqtt.client as mqtt
 
-from nhc2_coco.const import MQTT_PROTOCOL, MQTT_TRANSPORT
+from .const import MQTT_PROTOCOL, MQTT_TRANSPORT
 
 loop = asyncio.get_event_loop()
 

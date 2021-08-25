@@ -1,6 +1,6 @@
 import asyncio
 
-from nhc2_coco.coco_discover_profiles import CoCoDiscoverProfiles
+from .nhc2_coco.coco_discover_profiles import CoCoDiscoverProfiles
 
 # Enter the IP/Host you want to test here
 host = 'nhc2.local'

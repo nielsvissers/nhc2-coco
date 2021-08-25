@@ -4,7 +4,7 @@ from time import sleep
 
 import paho.mqtt.client as mqtt
 
-from nhc2_coco.const import MQTT_TOPIC_PUBLIC_AUTH_RSP, MQTT_PROTOCOL, MQTT_TRANSPORT, MQTT_TOPIC_PUBLIC_AUTH_CMD
+from .const import MQTT_TOPIC_PUBLIC_AUTH_RSP, MQTT_PROTOCOL, MQTT_TRANSPORT, MQTT_TOPIC_PUBLIC_AUTH_CMD
 
 
 class CoCoProfiles:
