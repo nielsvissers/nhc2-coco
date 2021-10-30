@@ -39,9 +39,9 @@ class CoCoDiscoverProfiles:
                 try:
                     host = socket.gethostbyaddr(address)[0]
                 except:
-                    host = None
+                    host = address
             else:
-                host = None
+                host = address
             self._profiles_found.append((address, mac, profiles, host))
 
         return inner_function
@@ -54,9 +54,8 @@ class CoCoDiscoverProfiles:
                          self._done_discovering_profiles_callback)
 
     def _done_discovering_profiles_callback(self):
-        while len(self._controllers_found) != len(self._profiles_found):
-            time.sleep(1)
-        loop.call_soon_threadsafe(callback=self._done)
+        if len(self._controllers_found) == len(self._profiles_found):
+            loop.call_soon_threadsafe(callback=self._done)
 
     def _discover_controllers_callback(self, address, mac, is_nhc2):
         if (is_nhc2):
