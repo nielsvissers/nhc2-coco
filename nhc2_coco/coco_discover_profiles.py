@@ -1,8 +1,8 @@
 import asyncio
 import socket
 
-from nhc2_coco.coco_discover import CoCoDiscover
-from nhc2_coco.coco_profiles import CoCoProfiles
+from .coco_discover import CoCoDiscover
+from .coco_profiles import CoCoProfiles
 
 loop = asyncio.get_event_loop()
 
