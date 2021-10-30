@@ -1,4 +1,4 @@
-from . import CoCo
+from nhc2_coco_2 import CoCo
 from nhc2_coco_2.coco_device_class import CoCoDeviceClass
 from nhc2_coco_2.tests.credentials import HOST, USER, PASS, PORT
 
