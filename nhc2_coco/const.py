@@ -12,12 +12,12 @@ MQTT_CERT_FILE = '/coco_ca.pem'
 VALUE_DIMMER = 'dimmer'
 
 LIST_VALID_LIGHTS = ['light', VALUE_DIMMER]
-LIST_VALID_SWITCHES = ['socket', 'switched-generic','generic']
+LIST_VALID_SWITCHES = ['socket', 'switched-generic']
 LIST_VALID_SHUTTERS = ['rolldownshutter', 'sunblind', 'gate', 'venetianblind']
 LIST_VALID_FANS = ['fan']
 LIST_VALID_SWITCHED_FANS = ['switched-fan']
 LIST_VALID_THERMOSTATS = ['thermostat']
-#LIST_VALID_GENERICS = ['generic']
+LIST_VALID_GENERICS = ['generic']
 
 DEVICE_CONTROL_BUFFER_SIZE = 16
 DEVICE_CONTROL_BUFFER_COMMAND_SIZE = 32
